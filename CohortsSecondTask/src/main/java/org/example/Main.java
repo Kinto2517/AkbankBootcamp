@@ -2,8 +2,6 @@ package org.example;
 
 import org.example.Classes.Client;
 import org.example.Classes.Invoice;
-import org.example.Classes.Order;
-import org.example.Services.OrderService;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -72,7 +70,7 @@ public class Main {
 
 
         // All invoices in June grouped by client
-        System.out.println("\n***All invoices in June grouped by client that has below the average amount of 750:");
+        System.out.println("\n***The sector of companies with average invoices below 750 in June:");
         invoices.stream()
                 .filter(invoice -> invoice.getDate().equals("June"))
                 .collect(Collectors.groupingBy(invoice -> invoice.getClient().getSector()))
